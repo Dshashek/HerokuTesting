@@ -1,3 +1,4 @@
+
 function getInputs() {
 
 var inputResults = [];
@@ -62,5 +63,5 @@ var i15 = document.getElementById('foreignWorker');
 var foreignWorker = i15.options[i15.selectedIndex].value;
 inputResults.push(foreignWorker);
 
-console.log(inputResults)
+return data = inputResults
 }

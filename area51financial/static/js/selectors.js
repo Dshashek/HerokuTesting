@@ -63,5 +63,7 @@ var i15 = document.getElementById('foreignWorker');
 var foreignWorker = i15.options[i15.selectedIndex].value;
 inputResults.push(foreignWorker);
 
-return data = inputResults
+strings = JSON.stringify(inputResults)
+return inputStorage = sessionStorage.setItem('inputs',strings)
 }
+

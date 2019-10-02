@@ -14,8 +14,8 @@ app = Flask(__name__)
 
 @app.route("/")
 def index():
-    return render_template('Index.html')
+    return render_template('area51financial.html')
 
 
 if __name__ == '__main__':
-    app.run(debug=False)
+    app.run(debug=True)

@@ -34,6 +34,12 @@ def submit():
     DATABASE_URL = os.environ['DATABASE_URL']
 
     conn = psycopg2.connect(DATABASE_URL, sslmode='require')
+    cur = conn.cursor()
+    cur.execute("CREATE TABLE area51financial (id serial PRIMARY KEY, i1,i2,i3,i4,i5,i6,i7,i8,i9,i10,i11,i12,i13,i14,i15)")
+    cur.execute("INSERT INTO area51financial (id serial PRIMARY KEY, i1,i2,i3,i4,i5,i6,i7,i8,i9,i10,i11,i12,i13,i14,i15), VALUES (dependents,checkingAcctBalance,loanLength,creditHistory,loanPurpose,loanSize,savingsAcctBalance,employmentHistory,cosignerCoborrower,age,otherLoans,homeowner,employmentType,telephone,foreignWorker)")
+    cur.commit()
+    cur.close()
+    conn.close()
 
     return items
 

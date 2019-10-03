@@ -1,19 +1,42 @@
 
-from flask import Flask,render_template,request, url_for
+from flask import Flask,render_template,request, url_for, jsonify, redirect
 import pandas as pd
 import requests
 import json
+import get_data as get_data
 
 app = Flask(__name__)
 
-
-@app.route("/")
+@app.route("/", methods=["POST","GET"])
 def index():
     return render_template('area51financial.html')
 
-@app.route("/results")
-def results():
-    return render_template('area51financial.html')
+@app.route("/submit", methods = ['POST','GET'])
+def submit():
+    dependents = request.form.get('dependents')
+    checkingAcctBalance = request.form.get('checkingAcctBalance')
+    loanLength = request.form.get('loanLength')
+    creditHistory = request.form.get('creditHistory')
+    loanPurpose = request.form.get('loanPurpose')
+    loanSize = request.form.get('loanSize')
+    savingsAcctBalance = request.form.get('savingsAcctBalance')
+    employmentHistory = request.form.get('employmentHistory')
+    cosignerCoborrower = request.form.get('cosignerCoborrower')
+    age = request.form.get('age')
+    otherLoans = request.form.get('otherLoans')
+    homeowner = request.form.get('homeowner')
+    employmentType = request.form.get('employmentType')
+    telephone = request.form.get('telephone')
+    foreignWorker = request.form.get('foreignWorker')   
 
+    items = jsonify(dependents,checkingAcctBalance,loanLength,creditHistory,loanPurpose,loanSize,savingsAcctBalance,employmentHistory,cosignerCoborrower,age,otherLoans,homeowner,employmentType,telephone,foreignWorker)
+    return items
+
+@app.route("/submit", methods = ['POST','GET'])
+def test():
+    req_data = request.get_json()
+    dependents = req_data[0]
+    print(req_data)
+    return 
 if __name__ == '__main__':
     app.run(debug=True)

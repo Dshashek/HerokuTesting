@@ -21,13 +21,13 @@
             <p class="lead">Loan Approval Form</p>
         </div>
     </div>
-
     <div class="container">
+        <form action="{{ url_for('submit') }}" method="POST">
         <div class="input-group mb-3">
             <div class="input-group-prepend">
                 <label class="input-group-text" for="dependents">Do you have dependents?</label>
             </div>
-            <select class="custom-select" id="dependents">
+            <select class="form-control" id="dependents" name="dependents">
                 <option selected>Choose...</option>
                 <option value="0">Yes</option>
                 <option value="1">No</option>
@@ -38,7 +38,7 @@
                 <div class="input-group-prepend">
                     <label class="input-group-text" for="checkingAcctBalance">What is the current balance of your checking account?</label>
                 </div>
-                <select class="custom-select" id="checkingAcctBalance">
+                <select class="custom-select" id="checkingAcctBalance" name='checkingAcctBalance'>
                     <option selected>Choose...</option>
                     <option value="A11">Negative</option>
                     <option value="A12">$0 - $10,000</option>
@@ -51,7 +51,7 @@
             <div class="input-group-prepend">
                 <label class="input-group-text" for="loanLength">How long of a loan do you need?</label>
             </div>
-            <select class="custom-select" id="loanLength">
+            <select class="custom-select" id="loanLength" name =  "loanLength">
                 <option selected>Choose...</option>
                 <option value="B10">0 to 11 months</option>
                 <option value="B11">12 to 23 months</option>
@@ -66,7 +66,7 @@
             <div class="input-group-prepend">
                 <label class="input-group-text" for="creditHistory">What is your credit history?</label>
             </div>
-            <select class="custom-select" id="creditHistory">
+            <select class="custom-select" id="creditHistory" name="creditHistory">
                 <option selected>Choose...</option>
                 <option value="A30">No Credit History</option>
                 <option value="A31">All debts repaid</option>
@@ -80,7 +80,7 @@
             <div class="input-group-prepend">
                 <label class="input-group-text" for="loanPurpose">What is this loan for?</label>
             </div>
-            <select class="custom-select" id="loanPurpose">
+            <select class="custom-select" id="loanPurpose" name="loanPurpose">
                 <option selected>Choose...</option>
                 <option value="A40">New Car</option>
                 <option value="A41">Used Car</option>
@@ -99,7 +99,7 @@
                 <div class="input-group-prepend">
                     <label class="input-group-text" for="loanSize">Size of loan?</label>
                 </div>
-                <select class="custom-select" id="loanSize">
+                <select class="custom-select" id="loanSize" name="loanSize">
                     <option selected>Choose...</option>
                     <option value="B200">$0 to $2499</option>
                     <option value="B21">$2500 to $4999</option>
@@ -116,7 +116,7 @@
                     <div class="input-group-prepend">
                         <label class="input-group-text" for="savingsAcctBalance">How much do you have in savings?</label>
                     </div>
-                    <select class="custom-select" id="savingsAcctBalance">
+                    <select class="custom-select" id="savingsAcctBalance" name="savingsAcctBalance">
                         <option selected>Choose...</option>
                         <option value="A61">Less than $1,000</option>
                         <option value="A62">$1,000 - $4,999</option>
@@ -130,7 +130,7 @@
                         <div class="input-group-prepend">
                             <label class="input-group-text" for="employmentHistory">How many years have you been at your present employer?</label>
                         </div>
-                        <select class="custom-select" id="employmentHistory">
+                        <select class="custom-select" id="employmentHistory" name="employmentHistory">
                             <option selected>Choose...</option>
                             <option value="A71">Unemployed</option>
                             <option value="A72">Less than 1 year</option>
@@ -144,7 +144,7 @@
             <div class="input-group-prepend">
                 <label class="input-group-text" for="cosignerCoborrower">Do you have a co-borrower or guarantor?</label>
             </div>
-            <select class="custom-select" id="cosignerCoborrower">
+            <select class="custom-select" id="cosignerCoborrower" name="cosignerCoborrower">
                 <option selected>Choose...</option>
                 <option value="A101">None</option>
                 <option value="A102">Co-borrower</option>
@@ -156,7 +156,7 @@
             <div class="input-group-prepend">
                 <label class="input-group-text" for="age">What is your Age?</label>
             </div>
-            <select class="custom-select" id="age">
+            <select class="custom-select" id="age" name="age">
                 <option selected>Choose...</option>
                 <option value="B30">Under 24</option>
                 <option value="B31">25 to 34</option>
@@ -171,7 +171,7 @@
             <div class="input-group-prepend">
                 <label class="input-group-text" for="otherLoans">Do you have other installment loans?</label>
             </div>
-            <select class="custom-select" id="otherLoans">
+            <select class="custom-select" id="otherLoans" name="otherLoans">
                 <option selected>Choose...</option>
                 <option value="A141">Bank Loan</option>
                 <option value="A142">Store Loan</option>
@@ -184,7 +184,7 @@
             <div class="input-group-prepend">
                 <label class="input-group-text" for="homeowner">Do you rent or own your home?</label>
             </div>
-            <select class="custom-select" id="homeowner">
+            <select class="custom-select" id="homeowner" name="homeowner">
                 <option selected>Choose...</option>
                 <option value="A151">Rent</option>
                 <option value="A152">Own</option>
@@ -197,7 +197,7 @@
             <div class="input-group-prepend">
                 <label class="input-group-text" for="employmentType">Describe your employment?</label>
             </div>
-            <select class="custom-select" id="employmentType">
+            <select class="custom-select" id="employmentType" name="employmentType">
                 <option selected>Choose...</option>
                 <option value="A171">Unemployed/Unskilled Labor nonresident</option>
                 <option value="A172">Unskilled resident</option>
@@ -210,7 +210,7 @@
             <div class="input-group-prepend">
                 <label class="input-group-text" for="telephone">Do you have active telephone service?</label>
             </div>
-            <select class="custom-select" id="telephone">
+            <select class="custom-select" id="telephone", name="telephone">
                 <option selected>Choose...</option>
                 <option value="A191">Yes</option>
                 <option value="A192">No</option>
@@ -222,18 +222,16 @@
             <div class="input-group-prepend">
                 <label class="input-group-text" for="foreignWorker">Are you a foreign worker?</label>
             </div>
-            <select class="custom-select" id="foreignWorker">
+            <select class="custom-select" id="foreignWorker" name="foreignWorker">
                 <option selected>Choose...</option>
                 <option value="A201">Yes</option>
                 <option value="A202">No</option>
 
             </select>
         </div>
-
-        <button type="button" class="btn btn-primary btn-lg btn-block" onclick="getInputs()">Submit</button>
+        <button type="submit" class="btn btn-primary btn-lg btn-block" onclick="getInputs();">Submit</button>
         </form>
 
-        <div id ='inputTarget'>String</div>
 </body>
 
 </html>

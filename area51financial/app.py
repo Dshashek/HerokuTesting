@@ -34,7 +34,8 @@ def submit():
     DATABASE_URL = os.environ['DATABASE_URL']
 
     conn = psycopg2.connect(DATABASE_URL, sslmode='require')
-    cur = conn.cursor()    cur.commit()
+    cur = conn.cursor()    
+    cur.commit()
     cur.close()
     conn.close()
 

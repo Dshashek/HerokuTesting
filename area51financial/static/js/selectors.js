@@ -5,7 +5,7 @@ var inputResults = [];
 
 var i1 = document.getElementById('dependents');
 var dependents = i1.options[i1.selectedIndex].value;
-inputResults.push(dependents);
+inputResults.push({'input':dependents});
 
 var i2 = document.getElementById('checkingAcctBalance');
 var checkingAcctBalance = i2.options[i2.selectedIndex].value;
@@ -68,3 +68,10 @@ document.getElementById('inputTarget').textContent = inputResults
 return data = inputResults
 }
 
+function doWork() {
+	// ajax the JSON to the server
+	$.post("receiver", data, function(){
+
+	});
+	// stop link reloading the page
+ event.preventDefault();}

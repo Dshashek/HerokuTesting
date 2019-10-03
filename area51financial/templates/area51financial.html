@@ -2,12 +2,15 @@
 
 <head>
 
-    <!--Import Bootstrap -->
+    <!--Import Bootstrap and Ajax -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 
     <!-- Import selectors.js-->
     <script src="{{ url_for('static', filename='js/selectors.js') }}"></script>
+
+
 </head>
 
 <body>
@@ -227,7 +230,7 @@
             </select>
         </div>
 
-        <button type="button" class="btn btn-primary btn-lg btn-block" onclick="getInputs()">Submit</button>
+        <button type="button" class="btn btn-primary btn-lg btn-block" onclick="getInputs(); doWork();">Submit</button>
         </form>
 
         <div id ='inputTarget'>String</div>

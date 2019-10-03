@@ -4,10 +4,10 @@ import pandas as pd
 import requests
 import os
 import psycopg2
-from Python_Functions import parse_input
 
 def parse_input(list):
     input = pd.DataFrame(list)
+    print(list)
 
 app = Flask(__name__)
 

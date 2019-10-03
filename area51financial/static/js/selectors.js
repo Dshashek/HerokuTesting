@@ -72,6 +72,4 @@ function doWork() {
 	// ajax the JSON to the server
 	$.post("receiver", data, function(){
 
-	});
-	// stop link reloading the page
- event.preventDefault();}
+	});}

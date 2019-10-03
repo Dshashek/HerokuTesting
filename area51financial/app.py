@@ -2,8 +2,8 @@
 from flask import Flask,render_template,request, url_for, jsonify, redirect
 import pandas as pd
 import requests
-import json
-
+import os
+import psycopg2
 
 app = Flask(__name__)
 
@@ -30,6 +30,11 @@ def submit():
     foreignWorker = request.form.get('foreignWorker')   
 
     items = jsonify(dependents,checkingAcctBalance,loanLength,creditHistory,loanPurpose,loanSize,savingsAcctBalance,employmentHistory,cosignerCoborrower,age,otherLoans,homeowner,employmentType,telephone,foreignWorker)
+
+    DATABASE_URL = os.environ['DATABASE_URL']
+
+    conn = psycopg2.connect(DATABASE_URL, sslmode='require')
+
     return items
 
 @app.route("/submit", methods = ['POST','GET'])

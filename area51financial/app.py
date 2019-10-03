@@ -11,18 +11,6 @@ app = Flask(__name__)
 def index():
     return render_template('area51financial.html')
 
-@app.route('/receiver', methods = ['POST'])
-def worker():
-	# read json + reply
-	data = request.get_json()
-	result = ''
-
-	for item in data:
-		# loop over every row
-		result += str(item['make']) + '\n'
-
-	return result
-
 @app.route("/results")
 def results():
     return render_template('area51financial.html')

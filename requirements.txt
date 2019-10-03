@@ -15,4 +15,3 @@ Werkzeug==0.15.3
 gunicorn==19.7.1
 xlrd == 1.2.0
 requests == 2.22.0
-json

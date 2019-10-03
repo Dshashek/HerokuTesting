@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/Dshashek/HerokuTesting/issues"
   },
-  "homepage": "https://github.com/Dshashek/HerokuTesting#readme"
+  "homepage": "https://github.com/Dshashek/HerokuTesting#readme",
+  "dependencies": {
+    "requirejs": "^2.3.6"
+  }
 }

@@ -3,7 +3,7 @@ from flask import Flask,render_template,request, url_for, jsonify, redirect
 import pandas as pd
 import requests
 import json
-import get_data as get_data
+
 
 app = Flask(__name__)
 
@@ -34,9 +34,6 @@ def submit():
 
 @app.route("/submit", methods = ['POST','GET'])
 def test():
-    req_data = request.get_json()
-    dependents = req_data[0]
-    print(req_data)
     return 
 if __name__ == '__main__':
     app.run(debug=True)

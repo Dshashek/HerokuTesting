@@ -12,7 +12,7 @@ import pandas as pd
 
 def parse_input(list):
     input = pd.DataFrame(list)
-    return input.to_csv('thing.csv')
+
 
 
 # In[ ]:

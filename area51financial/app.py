@@ -76,7 +76,7 @@ def approved():
     return 
 
 @app.route("/denied")
-def test():
+def denied():
 
     return 
 if __name__ == '__main__':

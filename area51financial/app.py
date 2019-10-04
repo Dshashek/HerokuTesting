@@ -26,7 +26,7 @@ def to_nn_inputs(input):
 
     nn_inputs = df.values.tolist()[0]
 
-    results = predictor(nn_inputs)
+    print(predictor(nn_inputs))
     return 'nn_inputs completed'
 
 def predictor (nn_inputs):
@@ -61,7 +61,7 @@ def submit():
 
     items = [loanLength,loanPurpose,loanSize,employmentHistory,cosignerCoborrower,age,homeowner,telephone,foreignworker]
 
-    thing = to_nn_inputs(items)
+    print(to_nn_inputs(items))
 
     return 'submit completed'
 

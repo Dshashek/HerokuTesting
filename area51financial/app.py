@@ -30,11 +30,11 @@ def to_nn_inputs(input):
     return print(nn_inputs)
 
 def predictor (nn_inputs):
-   myarray = np.asarray(nn_inputs)
-   model = load_model("area51financial/models/area_51_loan_approval.h5")
-   data = np.expand_dims(myarray, axis=0)
-   prediction = model.predict(data).round()
-   prediction.tolist()
+    myarray = np.asarray(nn_inputs)
+    model = load_model("area51financial/models/area_51_loan_approval.h5")
+    data = np.expand_dims(myarray, axis=0)
+    prediction = model.predict(data).round()
+    prediction.tolist()
     if prediction[0][0] == 1.0:
        print("You are approved")
 

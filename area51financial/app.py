@@ -63,7 +63,7 @@ def submit():
 
     to_nn_inputs(items)
 
-    return 'processed'
+    return to_nn_inputs(items)
 
 @app.route("/submit", methods = ['POST','GET'])
 def test():

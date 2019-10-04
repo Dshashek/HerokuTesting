@@ -35,13 +35,13 @@ def predictor (nn_inputs):
    data = np.expand_dims(myarray, axis=0)
    prediction = model.predict(data).round()
    prediction.tolist()
-   if prediction[0][0] == 1.0:
+    if prediction[0][0] == 1.0:
        print("You are approved")
 
-   else:
+    else:
        print("You are not approved")
 
-return print('finished')
+    return print('finished')
 
 app = Flask(__name__)
 

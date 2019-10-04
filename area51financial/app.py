@@ -18,23 +18,18 @@ def index():
 
 @app.route("/submit", methods = ['POST','GET'])
 def submit():
-    dependents = request.form.get('dependents')
-    checkingAcctBalance = request.form.get('checkingAcctBalance')
     loanLength = request.form.get('loanLength')
-    creditHistory = request.form.get('creditHistory')
     loanPurpose = request.form.get('loanPurpose')
     loanSize = request.form.get('loanSize')
-    savingsAcctBalance = request.form.get('savingsAcctBalance')
     employmentHistory = request.form.get('employmentHistory')
     cosignerCoborrower = request.form.get('cosignerCoborrower')
     age = request.form.get('age')
-    otherLoans = request.form.get('otherLoans')
     homeowner = request.form.get('homeowner')
     employmentType = request.form.get('employmentType')
     telephone = request.form.get('telephone')
-    foreignWorker = request.form.get('foreignWorker')   
 
-    items = [dependents,checkingAcctBalance,loanLength,creditHistory,loanPurpose,loanSize,savingsAcctBalance,employmentHistory,cosignerCoborrower,age,otherLoans,homeowner,employmentType,telephone,foreignWorker]
+
+    items = [loanLength,loanPurpose,loanSize,employmentHistory,cosignerCoborrower,age,homeowner,employmentType,telephone]
 
     parse_input(items)
 

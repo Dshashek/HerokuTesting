@@ -62,7 +62,7 @@ def submit():
 
     to_nn_inputs(items)
 
-    return redirect('/', code=302)
+    return 
 
 @app.route("/submit", methods = ['POST','GET'])
 def test():

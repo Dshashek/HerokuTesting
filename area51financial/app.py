@@ -68,7 +68,10 @@ def submit():
 
     result = to_nn_inputs(items)
 
-    return result
+    if result == 1:
+        return redirect('/approved',code=302)
+    else:
+        return redirect('/denied', code=302)
 
 
 @app.route("/submit", methods = ['POST','GET'])

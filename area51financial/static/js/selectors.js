@@ -1,3 +1,4 @@
+
 function getInputs() {
 
 var formData = new FormData();
@@ -37,6 +38,7 @@ formData.append('input', telephone);
 var i15 = document.getElementById('foreignWorker');
 var foreignWorker = i15.options[i15.selectedIndex].value;
 formData.append('input', foreignWorker);
+
 
 return console.log('processed inputs')
 }

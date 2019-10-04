@@ -27,7 +27,7 @@ def to_nn_inputs(input):
     nn_inputs = df.values.tolist()[0]
 
     results = predictor(nn_inputs)
-    return results
+    return 'nn_inputs completed'
 
 def predictor (nn_inputs):
     myarray = np.asarray(nn_inputs)
@@ -63,7 +63,7 @@ def submit():
 
     thing = to_nn_inputs(items)
 
-    return thing
+    return 'submit completed'
 
 @app.route("/submit", methods = ['POST','GET'])
 def test():

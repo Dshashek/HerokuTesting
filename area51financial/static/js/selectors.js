@@ -42,10 +42,57 @@ formData.append('input', foreignWorker);
 
 if(document.getElementById("loanLength").value == "")
 {
-    alert("Please select value for loanLength");
+    alert("Please select a value");
     document.getElementById("loanLength").focus();
 }
 
+if(document.getElementById("loanPurpose").value == "")
+{
+    alert("Please select a value");
+    document.getElementById("loanPurpose").focus();
+}
+
+if(document.getElementById("loanSize").value == "")
+{
+    alert("Please select a value");
+    document.getElementById("loanSize").focus();
+}
+
+if(document.getElementById("employmentHistory").value == "")
+{
+    alert("Please select a value");
+    document.getElementById("employmentHistory").focus();
+}
+
+if(document.getElementById("cosignerCoborrower").value == "")
+{
+    alert("Please select a value");
+    document.getElementById("cosignerCoborrower").focus();
+}
+
+if(document.getElementById("age").value == "")
+{
+    alert("Please select a value");
+    document.getElementById("age").focus();
+}
+
+if(document.getElementById("homeowner").value == "")
+{
+    alert("Please select a value");
+    document.getElementById("homeowner").focus();
+}
+
+if(document.getElementById("telephone").value == "")
+{
+    alert("Please select a value");
+    document.getElementById("telephone").focus();
+}
+
+if(document.getElementById("foreignWorker").value == "")
+{
+    alert("Please select a value");
+    document.getElementById("foreignWorker").focus();
+}
 
 
 return console.log('processed inputs')

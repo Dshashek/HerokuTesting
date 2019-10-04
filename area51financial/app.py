@@ -26,8 +26,8 @@ def to_nn_inputs(input):
 
     nn_inputs = df.values.tolist()[0]
 
-    print(predictor(nn_inputs))
-    return 'nn_inputs completed'
+    result = predictor(nn_inputs)
+    return result
 
 def predictor (nn_inputs):
     myarray = np.asarray(nn_inputs)
@@ -35,11 +35,16 @@ def predictor (nn_inputs):
     data = np.expand_dims(myarray, axis=0)
     prediction = model.predict(data).round()
     prediction.tolist()
+    positive = 'You are approved'
+    negative = 'You are not approved'
+
     if prediction[0][0] == 1.0:
-       return "You are approved"
+        result = positive
+        return result
 
     else:
-       return "You are not approved"
+        result = negative       
+        return result
 
 app = Flask(__name__)
 

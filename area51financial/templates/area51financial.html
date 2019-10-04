@@ -22,31 +22,6 @@
         </div>
     </div>
     <div class="container">
-        <form action="{{ url_for('submit') }}" method="POST">
-        <div class="input-group mb-3">
-            <div class="input-group-prepend">
-                <label class="input-group-text" for="dependents">Do you have dependents?</label>
-            </div>
-            <select class="form-control" id="dependents" name="dependents">
-                <option selected>Choose...</option>
-                <option value="0">Yes</option>
-                <option value="1">No</option>
-            </select>
-        </div>
-            
-        <div class="input-group mb-3">
-                <div class="input-group-prepend">
-                    <label class="input-group-text" for="checkingAcctBalance">What is the current balance of your checking account?</label>
-                </div>
-                <select class="custom-select" id="checkingAcctBalance" name='checkingAcctBalance'>
-                    <option selected>Choose...</option>
-                    <option value="A11">Negative</option>
-                    <option value="A12">$0 - $10,000</option>
-                    <option value="A13">$10,000 or more</option>
-                    <option value="A14">No checking account</option>
-                </select>
-            </div>
-
         <div class="input-group mb-3">
             <div class="input-group-prepend">
                 <label class="input-group-text" for="loanLength">How long of a loan do you need?</label>
@@ -59,20 +34,6 @@
                 <option value="B13">36 to 47 months</option>
                 <option value="B14">48 to 60 months</option>
                 <option value="B15">60 to 72 months</option>
-            </select>
-        </div>
-
-        <div class="input-group mb-3">
-            <div class="input-group-prepend">
-                <label class="input-group-text" for="creditHistory">What is your credit history?</label>
-            </div>
-            <select class="custom-select" id="creditHistory" name="creditHistory">
-                <option selected>Choose...</option>
-                <option value="A30">No Credit History</option>
-                <option value="A31">All debts repaid</option>
-                <option value="A32">All existing loans in good standing</option>
-                <option value="A33">History of late payments/nonpayments</option>
-                <option value="A34">Critical account at other bank</option>
             </select>
         </div>
 
@@ -111,20 +72,6 @@
                     <option value="B27">$17500 to $20000</option>
                 </select>
             </div>
-                
-            <div class="input-group mb-3">
-                    <div class="input-group-prepend">
-                        <label class="input-group-text" for="savingsAcctBalance">How much do you have in savings?</label>
-                    </div>
-                    <select class="custom-select" id="savingsAcctBalance" name="savingsAcctBalance">
-                        <option selected>Choose...</option>
-                        <option value="A61">Less than $1,000</option>
-                        <option value="A62">$1,000 - $4,999</option>
-                        <option value="A63">$5,000 - $10,000</option>
-                        <option value="A64">More than $10,000</option>
-                        <option value="A65">No Savings</option>
-                    </select>
-                </div>
           
                 <div class="input-group mb-3">
                         <div class="input-group-prepend">
@@ -169,19 +116,6 @@
 
         <div class="input-group mb-3">
             <div class="input-group-prepend">
-                <label class="input-group-text" for="otherLoans">Do you have other installment loans?</label>
-            </div>
-            <select class="custom-select" id="otherLoans" name="otherLoans">
-                <option selected>Choose...</option>
-                <option value="A141">Bank Loan</option>
-                <option value="A142">Store Loan</option>
-                <option value="A143">None</option>
-
-            </select>
-        </div>
-
-        <div class="input-group mb-3">
-            <div class="input-group-prepend">
                 <label class="input-group-text" for="homeowner">Do you rent or own your home?</label>
             </div>
             <select class="custom-select" id="homeowner" name="homeowner">
@@ -190,19 +124,6 @@
                 <option value="A152">Own</option>
                 <option value="A153">Other</option>
 
-            </select>
-        </div>
-
-        <div class="input-group mb-3">
-            <div class="input-group-prepend">
-                <label class="input-group-text" for="employmentType">Describe your employment?</label>
-            </div>
-            <select class="custom-select" id="employmentType" name="employmentType">
-                <option selected>Choose...</option>
-                <option value="A171">Unemployed/Unskilled Labor nonresident</option>
-                <option value="A172">Unskilled resident</option>
-                <option value="A173">Skilled Labor</option>
-                <option value="A174">Management/Self Employed/Specialist</option>
             </select>
         </div>
 
@@ -231,6 +152,7 @@
         </div>
         <button type="submit" class="btn btn-primary btn-lg btn-block" onclick="getInputs();">Submit</button>
         </form>
+
 
 </body>
 

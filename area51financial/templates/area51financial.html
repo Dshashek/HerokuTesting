@@ -1,64 +1,72 @@
-<!DOCTYPE html>
+<html>
+<script type="text/javascript" charset="utf-8" id="zm-extension" src="chrome-extension://fdcgdnkidjaadafnichfpabhfomcebme/scripts/webrtc-patch.js" async=""></script>
 
 <head>
 
     <!--Import Bootstrap and Ajax -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 
     <!-- Import selectors.js-->
-    <script src="{{ url_for('static', filename='js/selectors.js') }}"></script>
+    <script src="/static/js/selectors.js"></script>
 
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
 </head>
 
 <body>
-    <form action="{{ url_for('submit') }}" method="POST" id='myForm'>
-        <div class="jumbotron jumbotron-fluid">
-            <div class="container">
-                <h1 class="display-4">Area 51 Financial</h1>
-                <p class="lead">Loan Approval Form</p>
-            </div>
-        </div>
+
+    <div class="jumbotron jumbotron-fluid">
         <div class="container">
-            <div class="input-group mb-3">
-                <div class="input-group-prepend">
-                    <label class="input-group-text" for="loanLength">How long of a loan do you need?</label>
-                </div>
-                <select class="custom-select" id="loanLength" name="loanLength">
-                    <option selected>Choose...</option>
-                    <option value="B10">0 to 11 months</option>
-                    <option value="B11">12 to 23 months</option>
-                    <option value="B12">24 to 35 months</option>
-                    <option value="B13">36 to 47 months</option>
-                    <option value="B14">48 to 60 months</option>
-                    <option value="B15">60 to 72 months</option>
-                </select>
+            <h1 class="display-4">Area 51 Financial</h1>
+            <p class="lead">Loan Approval Form</p>
+        </div>
+    </div>
+    <div class="container">
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <label class="input-group-text" for="loanLength" data-toggle="popover" title="Popover Header" data-content="Some content inside the popover">How long of a loan do you need?</label>
             </div>
+            <select class="custom-select" id="loanLength" name="loanLength">
+                <option selected="">Choose...</option>
+                <option value="B10">0 to 11 months</option>
+                <option value="B11">12 to 23 months</option>
+                <option value="B12">24 to 35 months</option>
+                <option value="B13">36 to 47 months</option>
+                <option value="B14">48 to 60 months</option>
+                <option value="B15">60 to 72 months</option>
+            </select>
+        </div>
 
-            <div class="input-group mb-3">
-                <div class="input-group-prepend">
-                    <label class="input-group-text" for="loanPurpose">What is this loan for?</label>
-                </div>
-                <select class="custom-select" id="loanPurpose" name="loanPurpose">
-                    <option selected>Choose...</option>
-                    <option value="A40">New Car</option>
-                    <option value="A41">Used Car</option>
-                    <option value="A42">Furniture</option>
-                    <option value="A43">Television/Stero</option>
-                    <option value="A44">Appliances</option>
-                    <option value="A45">Repairs</option>
-                    <option value="A46">Education</option>
-                    <option value="A48">Retraining</option>
-                    <option value="A49">Business</option>
-                    <option value="A410">Other</option>
-                </select>
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <label class="input-group-text" for="loanPurpose" data-toggle="popover" title="Popover Header" data-content="Some content inside the popover">What is this loan for?</label>
             </div>
+            <select class="custom-select" id="loanPurpose" name="loanPurpose">
+                <option selected="">Choose...</option>
+                <option value="A40">New Car</option>
+                <option value="A41">Used Car</option>
+                <option value="A42">Furniture</option>
+                <option value="A43">Television/Stero</option>
+                <option value="A44">Appliances</option>
+                <option value="A45">Repairs</option>
+                <option value="A46">Education</option>
+                <option value="A48">Retraining</option>
+                <option value="A49">Business</option>
+                <option value="A410">Other</option>
+            </select>
+        </div>
 
-            <div class="input-group mb-3">
-                <div class="input-group-prepend">
-                    <label class="input-group-text" for="loanSize">Size of loan?</label>
-                </div>
-                <select class="custom-select" id="loanSize" name="loanSize">
-                    <option selected>Choose...</option>
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <label class="input-group-text" for="loanSize" data-toggle="popover" title="Popover Header" data-content="Some content inside the popover">Size of loan?</label>
+
+            </div>
+            <select class="custom-select" id="loanSize" name="loanSize">
+                    <option selected="">Choose...</option>
                     <option value="B200">$0 to $2499</option>
                     <option value="B21">$2500 to $4999</option>
                     <option value="B22">$5000 to $7499</option>
@@ -68,116 +76,131 @@
                     <option value="B26">$15000 to $17499</option>
                     <option value="B27">$17500 to $20000</option>
                 </select>
-            </div>
-
-            <div class="input-group mb-3">
-                <div class="input-group-prepend">
-                    <label class="input-group-text" for="employmentHistory">How many years have you been at your present
-                        employer?</label>
-                </div>
-                <select class="custom-select" id="employmentHistory" name="employmentHistory">
-                    <option selected>Choose...</option>
-                    <option value="A71">Unemployed</option>
-                    <option value="A72">Less than 1 year</option>
-                    <option value="A73">1-4 years</option>
-                    <option value="A74">5-7 years</option>
-                    <option value="A75">More than 7 years</option>
-                </select>
-            </div>
-
-            <div class="input-group mb-3">
-                <div class="input-group-prepend">
-                    <label class="input-group-text" for="cosignerCoborrower">Do you have a co-borrower or
-                        guarantor?</label>
-                </div>
-                <select class="custom-select" id="cosignerCoborrower" name="cosignerCoborrower">
-                    <option selected>Choose...</option>
-                    <option value="A101">None</option>
-                    <option value="A102">Co-borrower</option>
-                    <option value="A103">Guarantor</option>
-                </select>
-            </div>
-
-            <div class="input-group mb-3">
-                <div class="input-group-prepend">
-                    <label class="input-group-text" for="age">What is your Age?</label>
-                </div>
-                <select class="custom-select" id="age" name="age">
-                    <option selected>Choose...</option>
-                    <option value="B30">Under 24</option>
-                    <option value="B31">25 to 34</option>
-                    <option value="B32">35 to 44</option>
-                    <option value="B33">45 to 54</option>
-                    <option value="B34">55 to 64</option>
-                    <option value="B35">65 to 75</option>
-                </select>
-            </div>
-
-            <div class="input-group mb-3">
-                <div class="input-group-prepend">
-                    <label class="input-group-text" for="homeowner">Do you rent or own your home?</label>
-                </div>
-                <select class="custom-select" id="homeowner" name="homeowner">
-                    <option selected>Choose...</option>
-                    <option value="A151">Rent</option>
-                    <option value="A152">Own</option>
-                    <option value="A153">Other</option>
-
-                </select>
-            </div>
-
-            <div class="input-group mb-3">
-                <div class="input-group-prepend">
-                    <label class="input-group-text" for="telephone">Do you have active telephone service?</label>
-                </div>
-                <select class="custom-select" id="telephone" , name="telephone">
-                    <option selected>Choose...</option>
-                    <option value="A191">Yes</option>
-                    <option value="A192">No</option>
-
-                </select>
-            </div>
-
-            <div class="input-group mb-3">
-                <div class="input-group-prepend">
-                    <label class="input-group-text" for="foreignWorker">Are you a foreign worker?</label>
-                </div>
-                <select class="custom-select" id="foreignWorker" name="foreignWorker">
-                    <option selected>Choose...</option>
-                    <option value="A201">Yes</option>
-                    <option value="A202">No</option>
-
-                </select>
-            </div>
-            <button type="submit" class="btn btn-primary btn-lg btn-block" data-toggle="modal"
-                data-target="#exampleModal" data-toggle='modal' data-target='#exampleModal' onclick="getInputs();">Submit</button>
-    </form>
-  
-  <!-- Modal -->
-  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
         </div>
-        <div class="modal-body">
-          ...
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-primary">Save changes</button>
-        </div>
-      </div>
-    </div>
-  </div>
 
-  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <label class="input-group-text" for="employmentHistory" data-toggle="popover" title="Popover Header" data-content="Some content inside the popover">How many years have you been at your present employer?</label>
+            </div>
+            <select class="custom-select" id="employmentHistory" name="employmentHistory">
+                            <option selected="">Choose...</option>
+                            <option value="A71">Unemployed</option>
+                            <option value="A72">Less than 1 year</option>
+                            <option value="A73">1-4 years</option>
+                            <option value="A74">5-7 years</option>
+                            <option value="A75">More than 7 years</option>
+                        </select>
+        </div>
 
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <label class="input-group-text" for="cosignerCoborrower" data-toggle="popover" title="Popover Header" data-content="Some content inside the popover">Do you have a co-borrower or guarantor?</label>
+            </div>
+            <select class="custom-select" id="cosignerCoborrower" name="cosignerCoborrower">
+                <option selected="">Choose...</option>
+                <option value="A101">None</option>
+                <option value="A102">Co-borrower</option>
+                <option value="A103">Guarantor</option>
+            </select>
+        </div>
+
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <label class="input-group-text" for="age" data-toggle="popover" title="Popover Header" data-content="Some content inside the popover">What is your Age?</label>
+            </div>
+            <select class="custom-select" id="age" name="age">
+                <option selected="">Choose...</option>
+                <option value="B30">Under 24</option>
+                <option value="B31">25 to 34</option>
+                <option value="B32">35 to 44</option>
+                <option value="B33">45 to 54</option>
+                <option value="B34">55 to 64</option>
+                <option value="B35">65 to 75</option>
+            </select>
+        </div>
+
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <label class="input-group-text" for="homeowner" data-toggle="popover" title="Popover Header" data-content="Some content inside the popover">Do you rent or own your home?</label>
+            </div>
+            <select class="custom-select" id="homeowner" name="homeowner">
+                <option selected="">Choose...</option>
+                <option value="A151">Rent</option>
+                <option value="A152">Own</option>
+                <option value="A153">Other</option>
+
+            </select>
+        </div>
+
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <label class="input-group-text" for="telephone" data-toggle="popover" title="Popover Header" data-content="Some content inside the popover">Do you have active telephone service?</label>
+            </div>
+            <select class="custom-select" id="telephone" ,="" name="telephone">
+                <option selected="">Choose...</option>
+                <option value="A191">Yes</option>
+                <option value="A192">No</option>
+
+            </select>
+        </div>
+
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <label class="input-group-text" for="foreignWorker" data-toggle="popover" title="Popover Header" data-content="Some content inside the popover">Are you a foreign worker?</label>
+            </div>
+            <select class="custom-select" id="foreignWorker" name="foreignWorker">
+                <option selected="">Choose...</option>
+                <option value="A201">Yes</option>
+                <option value="A202">No</option>
+
+            </select>
+        </div>
+        <div class="container mt-3">
+
+            <!-- Trigger the modal with a button -->
+            <button type="button" class="btn btn-primary" id="myBtn">Submit</button>
+
+            <!-- The Modal -->
+            <div class="modal fade" id="myModal">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+
+                        <!-- Modal Header -->
+                        <div class="modal-header">
+                            <h5 class="modal-title">Your Loan is :</h5>
+                            <button type="button" class="close" data-dismiss="modal">×</button>
+                        </div>
+
+                        <!-- Modal body -->
+                        <div class="modal-body">
+
+                        </div>
+
+                        <!-- Modal footer -->
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-danger" onclick="window.location.reload();" data-dismiss="modal">Close</button>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <script>
+            $(document).ready(function() {
+                $("#myBtn").click(function() {
+                    $("#myModal").modal();
+                });
+
+                $('[data-toggle="popover"]').popover({
+                    placement: 'top',
+                    trigger: 'hover'
+                });
+
+            });
+        </script>
 </body>
 
 </html>

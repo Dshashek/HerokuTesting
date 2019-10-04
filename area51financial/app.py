@@ -36,11 +36,12 @@ def predictor (nn_inputs):
    prediction = model.predict(data).round()
    prediction.tolist()
    if prediction[0][0] == 1.0:
-        print("You are approved")
-        redirect('/approved', code=302)
+       print("You are approved")
+
    else:
-        print("You are not approved")
-        redirect('/denied', code=302)  
+       print("You are not approved")
+
+    return print('finished')
 
 app = Flask(__name__)
 
@@ -72,12 +73,11 @@ def test():
 
 @app.route("/approved")
 def approved():
-    return print('you were approved')
+    return 
 
 @app.route("/denied")
-def denied():
+def test():
 
-    return print('you were not approved')
-
+    return 
 if __name__ == '__main__':
     app.run(debug=True)

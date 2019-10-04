@@ -40,5 +40,5 @@ var foreignWorker = i15.options[i15.selectedIndex].value;
 formData.append('input', foreignWorker);
 
 
-return event.preventDefault();
+return print('processed inputs')
 }

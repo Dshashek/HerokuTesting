@@ -62,7 +62,7 @@ def submit():
 
     to_nn_inputs(items)
 
-    return print('success')
+    return event.preventDefault();
 
 @app.route("/submit", methods = ['POST','GET'])
 def test():

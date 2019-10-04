@@ -6,8 +6,26 @@ import os
 import psycopg2
 from tensorflow.keras.models import load_model
 
-def parse_input(list):
-    print(list)
+def to_nn_inputs(input):
+
+
+    input_options = ['A40','A41','A410','A42','A43','A44','A45','A46','A48','A49','A71','A72','A73','A74','A75','A101','A102','A103','A151','A152','A153','A191','A192','A201','A202','B10','B11','B12','B13','B14','B15','B20','B21','B22','B23','B24','B25','B26','B27','B30','B31','B32','B33','B34','B35']
+    pd_proto = {}
+
+    for item in input_options:
+        pd_proto[f'{item}'] = 0
+
+    df = pd.DataFrame(pd_proto,index=['input'])
+
+    counter = 0
+
+    while counter < len(input):
+        df[f'{input[counter]}'] = df[f'{input[counter]}'] + 1
+        counter = counter+1
+
+    nn_inputs = df.values.tolist()[0]
+
+    return print(nn_inputs)
 
 app = Flask(__name__)
 
@@ -29,7 +47,7 @@ def submit():
 
     items = [loanLength,loanPurpose,loanSize,employmentHistory,cosignerCoborrower,age,homeowner,telephone,foreignworker]
 
-    parse_input(items)
+    to_nn_inputs(items)
 
     return redirect('/', code=302)
 

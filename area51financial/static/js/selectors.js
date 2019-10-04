@@ -39,6 +39,15 @@ var i15 = document.getElementById('foreignWorker');
 var foreignWorker = i15.options[i15.selectedIndex].value;
 formData.append('input', foreignWorker);
 
+function validate()
+{
+   if(document.getElementById("loanLength").value == "")
+   {
+      alert("Please select value for loanLength");
+      document.getElementById("loanLength").focus();
+      return false;
+   }
+}
 
 return console.log('processed inputs')
 }

@@ -26,8 +26,8 @@ def to_nn_inputs(input):
 
     nn_inputs = df.values.tolist()[0]
 
-    predictor(nn_inputs)
-    return nn_inputs
+    results = predictor(nn_inputs)
+    return results
 
 def predictor (nn_inputs):
     myarray = np.asarray(nn_inputs)

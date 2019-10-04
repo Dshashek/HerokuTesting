@@ -26,9 +26,9 @@ def submit():
     homeowner = request.form.get('homeowner')
     employmentType = request.form.get('employmentType')
     telephone = request.form.get('telephone')
+    foreignworker = request.form.get('foreignworker')
 
-
-    items = [loanLength,loanPurpose,loanSize,employmentHistory,cosignerCoborrower,age,homeowner,employmentType,telephone]
+    items = [loanLength,loanPurpose,loanSize,employmentHistory,cosignerCoborrower,age,homeowner,employmentType,telephone,foreignworker]
 
     parse_input(items)
 

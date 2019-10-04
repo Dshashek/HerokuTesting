@@ -31,7 +31,7 @@ def to_nn_inputs(input):
 
 def predictor (nn_inputs):
    myarray = np.asarray(nn_inputs)
-   model = load_model("model")
+   model = load_model("area_51_loan_approval")
    data = np.expand_dims(myarray, axis=0)
    prediction = model.predict(data).round()
    prediction.tolist()

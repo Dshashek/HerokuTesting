@@ -37,8 +37,10 @@ def predictor (nn_inputs):
    prediction.tolist()
    if prediction[0][0] == 1.0:
        print("You are approved")
+       return redirect('/approved', code=302)
    else:
-       print("You are not approved")
+        print("You are not approved")
+        return redirect('/denied', code=302)  
 
 app = Flask(__name__)
 
@@ -66,6 +68,15 @@ def submit():
 
 @app.route("/submit", methods = ['POST','GET'])
 def test():
+    return 
+
+@app.route("/approved")
+def approved():
+    return 
+
+@app.denied("/denied")
+def test():
+
     return 
 if __name__ == '__main__':
     app.run(debug=True)

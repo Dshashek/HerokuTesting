@@ -72,11 +72,12 @@ def test():
 
 @app.route("/approved")
 def approved():
-    return 
+    return print('you were approved')
 
 @app.denied("/denied")
-def test():
+def denied():
 
-    return 
+    return print('you were not approved')
+
 if __name__ == '__main__':
     app.run(debug=True)

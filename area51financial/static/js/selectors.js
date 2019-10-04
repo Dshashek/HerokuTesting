@@ -40,10 +40,10 @@ var foreignWorker = i15.options[i15.selectedIndex].value;
 formData.append('input', foreignWorker);
 
 
-   if(document.getElementById("loanLength").value == "Choose...")
-   {
-      alert("Please select value for loanLength");
-      document.getElementById("loanLength").focus();}
+if(document.getElementById("loanLength").value == "Choose...")
+{
+    alert("Please select value for loanLength");
+    document.getElementById("loanLength").focus();}
 
 
 

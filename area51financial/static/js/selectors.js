@@ -1,5 +1,8 @@
-function validate() {if(document.getElementById("loanLength").value == "")
-var valid = 1
+function validate() {
+    var valid = 1
+
+    if(document.getElementById("loanLength").value == "")
+    valid = 0
 {
     document.getElementById("loanLength").focus();
     valid = 0

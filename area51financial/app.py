@@ -74,7 +74,7 @@ def test():
 def approved():
     return print('you were approved')
 
-@app.denied("/denied")
+@app.route("/denied")
 def denied():
 
     return print('you were not approved')

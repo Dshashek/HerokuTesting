@@ -1,3 +1,62 @@
+function validate() {if(document.getElementById("loanLength").value == "")
+var valid = 1
+{
+    document.getElementById("loanLength").focus();
+    valid = 0
+}
+
+if(document.getElementById("loanPurpose").value == "")
+{
+    document.getElementById("loanPurpose").focus();
+    valid = 0
+}
+
+if(document.getElementById("loanSize").value == "")
+{
+    document.getElementById("loanSize").focus();
+    valid = 0
+}
+
+if(document.getElementById("employmentHistory").value == "")
+{
+    document.getElementById("employmentHistory").focus();
+    valid = 0
+}
+
+if(document.getElementById("cosignerCoborrower").value == "")
+{
+   document.getElementById("cosignerCoborrower").focus();
+   valid = 0
+}
+
+if(document.getElementById("age").value == "")
+{
+    document.getElementById("age").focus();
+    valid = 0
+}
+
+if(document.getElementById("homeowner").value == "")
+{
+    document.getElementById("homeowner").focus();
+    valid = 0
+}
+
+if(document.getElementById("telephone").value == "")
+{
+    document.getElementById("telephone").focus();
+    valid = 0
+}
+
+if(document.getElementById("foreignWorker").value == "")
+{
+    document.getElementById("foreignWorker").focus();
+    valid = 0
+}
+
+if(valid=1) {
+    getInputs();
+}}
+
 
 function getInputs() {
 
@@ -38,61 +97,6 @@ formData.append('input', telephone);
 var i15 = document.getElementById('foreignWorker');
 var foreignWorker = i15.options[i15.selectedIndex].value;
 formData.append('input', foreignWorker);
-
-
-if(document.getElementById("loanLength").value == "")
-{
-    document.getElementById("loanLength").focus();
-}
-
-if(document.getElementById("loanPurpose").value == "")
-{
-
-    document.getElementById("loanPurpose").focus();
-}
-
-if(document.getElementById("loanSize").value == "")
-{
-    alert("Please select a value");
-    document.getElementById("loanSize").focus();
-}
-
-if(document.getElementById("employmentHistory").value == "")
-{
-    alert("Please select a value");
-    document.getElementById("employmentHistory").focus();
-}
-
-if(document.getElementById("cosignerCoborrower").value == "")
-{
-    alert("Please select a value");
-    document.getElementById("cosignerCoborrower").focus();
-}
-
-if(document.getElementById("age").value == "")
-{
-    alert("Please select a value");
-    document.getElementById("age").focus();
-}
-
-if(document.getElementById("homeowner").value == "")
-{
-    alert("Please select a value");
-    document.getElementById("homeowner").focus();
-}
-
-if(document.getElementById("telephone").value == "")
-{
-    alert("Please select a value");
-    document.getElementById("telephone").focus();
-}
-
-if(document.getElementById("foreignWorker").value == "")
-{
-    alert("Please select a value");
-    document.getElementById("foreignWorker").focus();
-}
-
 
 return console.log('processed inputs')
 }

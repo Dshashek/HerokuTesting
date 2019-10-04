@@ -41,7 +41,7 @@ def predictor (nn_inputs):
    else:
        print("You are not approved")
 
-    return print('finished')
+return print('finished')
 
 app = Flask(__name__)
 

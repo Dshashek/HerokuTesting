@@ -61,9 +61,9 @@ def submit():
 
     items = [loanLength,loanPurpose,loanSize,employmentHistory,cosignerCoborrower,age,homeowner,telephone,foreignworker]
 
-    to_nn_inputs(items)
+    thing = to_nn_inputs(items)
 
-    return to_nn_inputs(items)
+    return thing
 
 @app.route("/submit", methods = ['POST','GET'])
 def test():

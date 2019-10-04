@@ -27,7 +27,7 @@ def to_nn_inputs(input):
     nn_inputs = df.values.tolist()[0]
 
     predictor(nn_inputs)
-    return nn_inputs
+    return predictor(nn_inputs)
 
 def predictor (nn_inputs):
     myarray = np.asarray(nn_inputs)
@@ -50,7 +50,7 @@ def index():
 @app.route("/submit", methods = ['POST','GET'])
 def submit():
     loanLength = request.form.get('loanLength')
-    loanPurpose = request.form.get('loanPurpose')
+    loanprocessedurpose = request.form.get('loanPurpose')
     loanSize = request.form.get('loanSize')
     employmentHistory = request.form.get('employmentHistory')
     cosignerCoborrower = request.form.get('cosignerCoborrower')

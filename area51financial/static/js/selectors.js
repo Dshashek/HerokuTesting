@@ -39,5 +39,6 @@ var i15 = document.getElementById('foreignWorker');
 var foreignWorker = i15.options[i15.selectedIndex].value;
 formData.append('input', foreignWorker);
 
+event.preventDefault();
 return inputForm = formData
 }

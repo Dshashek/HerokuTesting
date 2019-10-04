@@ -36,7 +36,7 @@ def predictor (nn_inputs):
    prediction = model.predict(data).round()
    prediction.tolist()
    if prediction[0][0] == 1.0:
-       print("You are approved")
+        print("You are approved")
         redirect('/approved', code=302)
    else:
         print("You are not approved")

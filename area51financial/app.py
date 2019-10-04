@@ -7,7 +7,6 @@ import psycopg2
 from tensorflow.keras.models import load_model
 
 def parse_input(list):
-    input = pd.DataFrame(list)
     print(list)
 
 app = Flask(__name__)

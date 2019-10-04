@@ -24,7 +24,7 @@
                     <label class="input-group-text" for="loanLength">How long of a loan do you need?</label>
                 </div>
                 <select required class="custom-select" id="loanLength" name="loanLength">
-                    <option selected>Choose...</option>
+                    <option selected value = ''>Choose...</option>
                     <option value="B10">0 to 11 months</option>
                     <option value="B11">12 to 23 months</option>
                     <option value="B12">24 to 35 months</option>
@@ -39,7 +39,7 @@
                     <label class="input-group-text" for="loanPurpose">What is this loan for?</label>
                 </div>
                 <select required class="custom-select" id="loanPurpose" name="loanPurpose">
-                    <option selected>Choose...</option>
+                    <option selected value = ''>Choose...</option>
                     <option value="A40">New Car</option>
                     <option value="A41">Used Car</option>
                     <option value="A42">Furniture</option>
@@ -58,7 +58,7 @@
                     <label class="input-group-text" for="loanSize">Size of loan?</label>
                 </div>
                 <select required class="custom-select" id="loanSize" name="loanSize">
-                    <option selected>Choose...</option>
+                    <option selected value = ''>Choose...</option>
                     <option value="B200">$0 to $2499</option>
                     <option value="B21">$2500 to $4999</option>
                     <option value="B22">$5000 to $7499</option>
@@ -76,7 +76,7 @@
                         employer?</label>
                 </div>
                 <select required class="custom-select" id="employmentHistory" name="employmentHistory">
-                    <option selected>Choose...</option>
+                    <option selected value = ''>Choose...</option>
                     <option value="A71">Unemployed</option>
                     <option value="A72">Less than 1 year</option>
                     <option value="A73">1-4 years</option>
@@ -91,7 +91,7 @@
                         guarantor?</label>
                 </div>
                 <select required class="custom-select" id="cosignerCoborrower" name="cosignerCoborrower">
-                    <option selected>Choose...</option>
+                    <option selected value = ''>Choose...</option>
                     <option value="A101">None</option>
                     <option value="A102">Co-borrower</option>
                     <option value="A103">Guarantor</option>
@@ -103,7 +103,7 @@
                     <label class="input-group-text" for="age">What is your Age?</label>
                 </div>
                 <select required class="custom-select" id="age" name="age">
-                    <option selected>Choose...</option>
+                    <option selected value = ''>Choose...</option>
                     <option value="B30">Under 24</option>
                     <option value="B31">25 to 34</option>
                     <option value="B32">35 to 44</option>
@@ -118,7 +118,7 @@
                     <label class="input-group-text" for="homeowner">Do you rent or own your home?</label>
                 </div>
                 <select required class="custom-select" id="homeowner" name="homeowner">
-                    <option selected>Choose...</option>
+                    <option selected value = ''>Choose...</option>
                     <option value="A151">Rent</option>
                     <option value="A152">Own</option>
                     <option value="A153">Other</option>
@@ -149,31 +149,9 @@
 
                 </select>
             </div>
-            <button type="submit" class="btn btn-primary btn-lg btn-block" data-toggle="modal"
-                data-target="#exampleModal" data-toggle='modal' data-target='#exampleModal' onclick="getInputs();">Submit</button>
+            <button type="submit" class="btn btn-primary btn-lg btn-block"  onclick="getInputs();">Submit</button>
     </form>
   
-  <!-- Modal -->
-  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="modal-body">
-          ...
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-primary">Save changes</button>
-        </div>
-      </div>
-    </div>
-  </div>
-
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>

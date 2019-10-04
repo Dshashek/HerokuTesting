@@ -42,13 +42,12 @@ formData.append('input', foreignWorker);
 
 if(document.getElementById("loanLength").value == "")
 {
-    alert("Please select a value");
     document.getElementById("loanLength").focus();
 }
 
 if(document.getElementById("loanPurpose").value == "")
 {
-    alert("Please select a value");
+
     document.getElementById("loanPurpose").focus();
 }
 

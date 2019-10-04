@@ -27,7 +27,7 @@ def to_nn_inputs(input):
     nn_inputs = df.values.tolist()[0]
 
     predictor(nn_inputs)
-    return print(nn_inputs)
+    return nn_inputs
 
 def predictor (nn_inputs):
     myarray = np.asarray(nn_inputs)
@@ -36,12 +36,10 @@ def predictor (nn_inputs):
     prediction = model.predict(data).round()
     prediction.tolist()
     if prediction[0][0] == 1.0:
-       print("You are approved")
+       return "You are approved"
 
     else:
-       print("You are not approved")
-
-    return redirect('/',code=302)
+       return "You are not approved"
 
 app = Flask(__name__)
 
@@ -65,7 +63,7 @@ def submit():
 
     to_nn_inputs(items)
 
-    return print('processed')
+    return 'processed'
 
 @app.route("/submit", methods = ['POST','GET'])
 def test():

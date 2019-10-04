@@ -38,7 +38,7 @@
                 <div class="input-group-prepend">
                     <label class="input-group-text" for="loanPurpose">What is this loan for?</label>
                 </div>
-                <select class="custom-select" id="loanPurpose" name="loanPurpose">
+                <select required class="custom-select" id="loanPurpose" name="loanPurpose">
                     <option selected value = ''>Choose...</option>
                     <option value="A40">New Car</option>
                     <option value="A41">Used Car</option>
@@ -57,7 +57,7 @@
                 <div class="input-group-prepend">
                     <label class="input-group-text" for="loanSize">Size of loan?</label>
                 </div>
-                <select class="custom-select" id="loanSize" name="loanSize">
+                <select required class="custom-select" id="loanSize" name="loanSize">
                     <option selected value = ''>Choose...</option>
                     <option value="B20">$0 to $2499</option>
                     <option value="B21">$2500 to $4999</option>
@@ -75,7 +75,7 @@
                     <label class="input-group-text" for="employmentHistory">How many years have you been at your present
                         employer?</label>
                 </div>
-                <select class="custom-select" id="employmentHistory" name="employmentHistory">
+                <select required class="custom-select" id="employmentHistory" name="employmentHistory">
                     <option selected value = ''>Choose...</option>
                     <option value="A71">Unemployed</option>
                     <option value="A72">Less than 1 year</option>
@@ -85,12 +85,12 @@
                 </select>
             </div>
 
-            <div class="input-group mb-3">
+            <div  class="input-group mb-3">
                 <div class="input-group-prepend">
                     <label class="input-group-text" for="cosignerCoborrower">Do you have a co-borrower or
                         guarantor?</label>
                 </div>
-                <select class="custom-select" id="cosignerCoborrower" name="cosignerCoborrower">
+                <select required class="custom-select" id="cosignerCoborrower" name="cosignerCoborrower">
                     <option selected value = ''>Choose...</option>
                     <option value="A101">None</option>
                     <option value="A102">Co-borrower</option>
@@ -102,7 +102,7 @@
                 <div class="input-group-prepend">
                     <label class="input-group-text" for="age">What is your Age?</label>
                 </div>
-                <select class="custom-select" id="age" name="age">
+                <select required class="custom-select" id="age" name="age">
                     <option selected value = ''>Choose...</option>
                     <option value="B30">Under 24</option>
                     <option value="B31">25 to 34</option>
@@ -117,7 +117,7 @@
                 <div class="input-group-prepend">
                     <label class="input-group-text" for="homeowner">Do you rent or own your home?</label>
                 </div>
-                <select class="custom-select" id="homeowner" name="homeowner">
+                <select required class="custom-select" id="homeowner" name="homeowner">
                     <option selected value = ''>Choose...</option>
                     <option value="A151">Rent</option>
                     <option value="A152">Own</option>
@@ -130,7 +130,7 @@
                 <div class="input-group-prepend">
                     <label class="input-group-text" for="telephone">Do you have active telephone service?</label>
                 </div>
-                <select class="custom-select" id="telephone" , name="telephone">
+                <select required class="custom-select" id="telephone" , name="telephone">
                     <option selected value = ''>Choose...</option>
                     <option value="A191">Yes</option>
                     <option value="A192">No</option>
@@ -142,14 +142,14 @@
                 <div class="input-group-prepend">
                     <label class="input-group-text" for="foreignWorker">Are you a foreign worker?</label>
                 </div>
-                <select class="custom-select" id="foreignWorker" name="foreignWorker">
+                <select required class="custom-select" id="foreignWorker" name="foreignWorker">
                     <option selected value = ''>Choose...</option>
                     <option value="A201">Yes</option>
                     <option value="A202">No</option>
 
                 </select>
             </div>
-            <button type="submit" class="btn btn-primary btn-lg btn-block" onclick="validate();">Submit</button>
+            <button type="submit" class="btn btn-primary btn-lg btn-block" onclick="getInputs();">Submit</button>
     </form>
 
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>

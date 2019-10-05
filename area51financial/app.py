@@ -35,8 +35,8 @@ def predictor (nn_inputs):
     data = np.expand_dims(myarray, axis=0)
     prediction = model.predict(data).round()
     prediction.tolist()
-    positive = 'You are approved'
-    negative = 'You are not approved'
+    positive = 1
+    negative = 0
 
     if prediction[0][0] == 1.0:
         result = positive
@@ -76,11 +76,11 @@ def test():
 
 @app.route("/approved")
 def approved():
-    return 
+    return redirect('/', code=302)
 
 @app.route("/denied")
 def denied():
+    return redirect('/', code=302)
 
-    return 
 if __name__ == '__main__':
     app.run(debug=True)

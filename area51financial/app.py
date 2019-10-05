@@ -80,12 +80,12 @@ def test():
 @app.route("/approved")
 def approved():
     print('approved')
-    return redirect('/', code=302)
+    return render_template('approved.html')
 
 @app.route("/denied")
 def denied():
     print('denied')
-    return redirect('/', code=302)
+    return render_template('denied.html')
 
 if __name__ == '__main__':
     app.run(debug=True)

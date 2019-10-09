@@ -87,5 +87,20 @@ def denied():
     print('denied')
     return render_template('denied.html')
 
+@app.route("/model")
+def denied():
+    print('model')
+    return render_template('model.html')
+
+@app.route("/summary")
+def denied():
+    print('summary')
+    return render_template('summary.html')
+
+@app.route("/apply")
+def denied():
+    print('apply')
+    return render_template('apply.html')
+
 if __name__ == '__main__':
     app.run(debug=True)

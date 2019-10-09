@@ -20,7 +20,7 @@
   <link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i" rel="stylesheet">
 
   <!-- Custom styles for this template -->
-  <link href="css/business-casual.css" rel="stylesheet">
+  <link href="{{ url_for('static',filename='css/business-casual.css') }}" rel="stylesheet">
 
 </head>
 
@@ -42,18 +42,18 @@
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav mx-auto">
           <li class="nav-item px-lg-4">
-            <a class="nav-link text-uppercase text-expanded" href="index.html">Home
+            <a class="nav-link text-uppercase text-expanded" href="/">Home
               <span class="sr-only">(current)</span>
             </a>
           </li>
           <li class="nav-item px-lg-4">
-            <a class="nav-link text-uppercase text-expanded" href="apply.html">Apply!</a>
+            <a class="nav-link text-uppercase text-expanded" href="/apply">Apply!</a>
           </li>
           <li class="nav-item active px-lg-4">
-            <a class="nav-link text-uppercase text-expanded" href="model.html">Our Models</a>
+            <a class="nav-link text-uppercase text-expanded" href="/model">Our Models</a>
           </li>
           <li class="nav-item px-lg-4">
-            <a class="nav-link text-uppercase text-expanded" href="summary.html">Summary</a>
+            <a class="nav-link text-uppercase text-expanded" href="/summary">Summary</a>
           </li>
         </ul>
       </div>
@@ -115,7 +115,7 @@
                 test against additional loan data and allow the model to attempt to predict the correct classification
                 based on the loan inputs.</p><br>
 
-              <img class="intro-img img-fluid mb-3 mb-lg-0 rounded" src="img/knn_conf.png" alt=""><br><hr>
+              <img class="intro-img img-fluid mb-3 mb-lg-0 rounded" src="{{ url_for('static',filename='img/knn_conf.png') }}" alt=""><br><hr>
 
 
               <p>Support Vector Machine (SVM) - 93.5% Accuracy</p>
@@ -123,12 +123,12 @@
                 classification and regression problems. For the test cases that the model predicted would not default,
                 the loans defaulted 13.5% of the time. </p><br>
 
-              <img class="intro-img img-fluid mb-3 mb-lg-0 rounded" src="img/svm_conf.png" alt=""><br><hr>
+              <img class="intro-img img-fluid mb-3 mb-lg-0 rounded" src="{{ url_for('static',filename='img/svm_conf.png') }}" alt=""><br><hr>
 
               <p>Deep Neural Network (DNN) - 93.8% Accuracy</p>
               <p>Deep Neural Network</p><br>
 
-              <img class="intro-img img-fluid mb-3 mb-lg-0 rounded" src="img/dnn_conf.png" alt=""><br><hr>
+              <img class="intro-img img-fluid mb-3 mb-lg-0 rounded" src="{{ url_for('static',filename='img/dnn_conf.png') }}" alt=""><br><hr>
 
               <h2 class="section-heading mb-4">
                 <span class="section-heading-upper">Feature importance</span>
@@ -136,7 +136,7 @@
               <p>We used a Lasso model to determine which of the impacts had the highest amount of influence on whether
                 a loan would or would not default. The loan term and loan amount were the most relevant factors in the
                 predicting a default.</p><br>
-              <img class="intro-img img-fluid mb-3 mb-lg-0 rounded" src="img/features.png" alt=""><br>
+              <img class="intro-img img-fluid mb-3 mb-lg-0 rounded" src="{{ url_for('static',filename='img/features.png') }}" alt=""><br>
 
 
             </div>

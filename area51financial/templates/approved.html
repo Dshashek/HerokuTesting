@@ -18,7 +18,7 @@
   <link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i" rel="stylesheet">
 
   <!-- Custom styles for this template -->
-  <link href="css/business-casual.css" rel="stylesheet">
+  <link href="{{ url_for('static',filename='css/business-casual.css') }}" rel="stylesheet">
 
 </head>
 
@@ -40,18 +40,18 @@
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav mx-auto">
           <li class="nav-item px-lg-4">
-            <a class="nav-link text-uppercase text-expanded" href="index.html">Home
+            <a class="nav-link text-uppercase text-expanded" href="/">Home
               <span class="sr-only">(current)</span>
             </a>
           </li>
           <li class="nav-item px-lg-4">
-            <a class="nav-link text-uppercase text-expanded" href="apply.html">Apply!</a>
+            <a class="nav-link text-uppercase text-expanded" href="/apply">Apply!</a>
           </li>
           <li class="nav-item px-lg-4">
-            <a class="nav-link text-uppercase text-expanded" href="model.html">Our Models</a>
+            <a class="nav-link text-uppercase text-expanded" href="/model">Our Models</a>
           </li>
           <li class="nav-item px-lg-4">
-            <a class="nav-link text-uppercase text-expanded" href="summary.html">Summary</a>
+            <a class="nav-link text-uppercase text-expanded" href="/summary">Summary</a>
           </li>
         </ul>
       </div>
@@ -69,7 +69,7 @@
                 <span class="section-heading-lower text-center">Your loan request has<br>been pre-approved!</span>
                 <span class="section-heading-upper"><br>Please contact your lending agent in order finalize your loan request</span>
               </h2>
-              <a href = "index.html" button type="button" class="btn btn-primary btn-lg btn-block">Contact Agent</a>
+              <a href = "/" button type="button" class="btn btn-primary btn-lg btn-block">Contact Agent</a>
 
             </div>
           </div>

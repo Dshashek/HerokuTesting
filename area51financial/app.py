@@ -50,7 +50,7 @@ app = Flask(__name__)
 
 @app.route("/", methods=["POST","GET"])
 def index():
-    return render_template('area51financial.html')
+    return render_template('index.html')
 
 @app.route("/submit", methods = ['POST','GET'])
 def submit():

@@ -88,17 +88,17 @@ def denied():
     return render_template('denied.html')
 
 @app.route("/model")
-def denied():
+def model():
     print('model')
     return render_template('model.html')
 
 @app.route("/summary")
-def denied():
+def summary():
     print('summary')
     return render_template('summary.html')
 
 @app.route("/apply")
-def denied():
+def apply():
     print('apply')
     return render_template('apply.html')
 
